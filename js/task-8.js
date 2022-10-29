@@ -7,22 +7,30 @@ const refs = {
 
 const object = {
   email: '',
-  password: '',
+  password: ''
 };
 
 const mail = document.getElementById('mail');
+
+// console.log(refs.emailInput.type);
+// console.log(refs.passInput.type);
+// console.log(refs.submitInput.type);
 
 refs.submitInput.addEventListener('click', submitDataShowing);
 
 function submitDataShowing(event) {
   event.preventDefault();
   if (refs.emailInput.value === '' && refs.passInput.value === '') {
-    alert('Please fill in all the fields');
+    alert('Please fill in all the fields')
   }
   object.email = refs.emailInput.value;
   object.password = refs.passInput.value;
 
   console.log(object);
+  // console.log(object.email)
+  // console.log(object.password)
+  // console.log('Email: ', refs.emailInput.value);
+  // console.log('Password: ', refs.passInput.value);
   reset(event);
 }
 
